@@ -1,0 +1,42 @@
+---
+interface Props {
+  title: string;
+  image: string;
+}
+
+const { title, image } = Astro.props;
+---
+
+<div class="
+  bg-[#0F172A]
+  text-[#FFFFFF]
+  font-['Inter']
+  rounded-none
+  border border-[#2D3748]
+  shadow-lg
+  p-6
+  flex flex-col
+  h-full
+  w-full
+  max-w-sm
+  mx-auto
+">
+  <img
+    src={image}
+    alt={title}
+    class="w-full h-48 object-cover block mb-4 rounded-none"
+    loading="lazy"
+  />
+  <h3 class="
+    font-['Exo_2']
+    text-2xl
+    font-semibold
+    leading-tight
+    mb-2
+    text-[#FFFFFF]
+  ">
+    {title}
+  </h3>
+  <!-- Slot for additional content if needed -->
+  <slot />
+</div>
