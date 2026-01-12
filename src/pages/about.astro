@@ -1,0 +1,183 @@
+---
+// Astro frontmatter for imports and logic
+import type { AstroBuiltinAttributes } from 'astro';
+
+interface Props extends AstroBuiltinAttributes<'html'> {}
+
+const brandName = "[Your Brand Name]"; // Placeholder for brand name
+const { ...attrs } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en" {...attrs}>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content={Astro.generator}>
+
+    <!-- SEO Meta Tags -->
+    <title>About Us | The Enigma Behind the Precision | {brandName}</title>
+    <meta name="description" content={`Uncover the compelling philosophy and precise methodology of ${brandName}. We are architects of the future, driven by visionary thought and meticulous execution.`}>
+    <meta name="keywords" content="enigmatic precision, visionary company, innovative strategy, meticulous execution, forward-thinking solutions, about us, our philosophy, strategic insight, company vision">
+
+    <!-- Preload and connect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon (placeholder) -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+
+    <!-- Tailwind CSS base styles (assuming Tailwind is configured in astro.config.mjs) -->
+    <style>
+        /* Custom Tailwind configuration for fonts */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Exo 2', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-[#FFFFFF] text-[#000000] font-['Inter'] antialiased">
+
+    <!-- hero-intro (Hero Section) -->
+    <section class="relative bg-[#0F172A] text-[#FFFFFF] py-24 md:py-32 lg:py-48 overflow-hidden">
+        <img
+            src="/assets/hero-background-abstract-geometric.jpg"
+            alt="Abstract geometric patterns creating a dynamic background"
+            class="absolute inset-0 w-full h-full object-cover opacity-30"
+            aria-hidden="true"
+            loading="eager"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] to-transparent"></div>
+        <div class="relative z-10 container mx-auto px-4 text-center max-w-4xl">
+            <img
+                src="/assets/logo-monochrome.svg"
+                alt={`${brandName} logo`}
+                class="h-16 md:h-20 mx-auto mb-8 opacity-75"
+                loading="eager"
+            />
+            <h1 class="font-['Exo_2'] text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 tracking-tight">
+                The Enigma Behind the Precision
+            </h1>
+            <p class="font-['Inter'] text-lg md:text-xl lg:text-2xl opacity-80 max-w-3xl mx-auto">
+                Where Visionary Thought Meets Unyielding Execution.
+            </p>
+        </div>
+    </section>
+
+    <!-- our-philosophy (Content Block) -->
+    <section class="bg-[#FFFFFF] text-[#000000] py-16 md:py-24 lg:py-32">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="font-['Exo_2'] text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+                        A Blueprint of Distinction
+                    </h2>
+                    <p class="font-['Inter'] text-lg md:text-xl leading-relaxed text-[#4A5568]">
+                        Our existence is predicated on a singular pursuit: to transcend the ordinary. We believe in the power of precise intention, where every decision is a calculated stride towards an unforeseen horizon. Innovation isn't just a goal; it's the very fabric of our being, woven with threads of meticulous research and audacious foresight. We don't just anticipate the future; we architect it.
+                    </p>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img
+                        src="/assets/abstract-gears-mechanism.jpg"
+                        alt="Abstract image of intricate gears and mechanism"
+                        class="w-full h-80 md:h-96 object-cover rounded-none shadow-lg"
+                        loading="lazy"
+                    />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- our-approach (Feature List) -->
+    <section class="bg-[#0F172A] text-[#FFFFFF] py-16 md:py-24 lg:py-32">
+        <div class="container mx-auto px-4 text-center max-w-6xl">
+            <h2 class="font-['Exo_2'] text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+                The Art of Calculated Evolution
+            </h2>
+            <p class="font-['Inter'] text-lg md:text-xl opacity-80 mb-12 max-w-3xl mx-auto">
+                Our methodology is a testament to controlled complexity, refined through an iterative pursuit of perfection. Each phase is a step closer to the extraordinary, executed with unparalleled exactitude and foresight. We navigate the unknown with a proven framework, transforming abstract concepts into tangible realities with unwavering focus and expertise.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mt-12">
+                <div class="flex flex-col items-center p-6 border border-[#2D3748] shadow-lg rounded-none bg-[#1A202C]">
+                    <img src="/assets/icon-precision.svg" alt="Abstract icon representing precision" class="w-16 h-16 mb-6 opacity-75" loading="lazy" />
+                    <h3 class="font-['Exo_2'] text-xl md:text-2xl font-semibold mb-3">Unwavering Precision</h3>
+                    <p class="font-['Inter'] text-base opacity-70">Every detail meticulously crafted, every outcome precisely engineered.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 border border-[#2D3748] shadow-lg rounded-none bg-[#1A202C]">
+                    <img src="/assets/icon-foresight.svg" alt="Abstract icon representing foresight" class="w-16 h-16 mb-6 opacity-75" loading="lazy" />
+                    <h3 class="font-['Exo_2'] text-xl md:text-2xl font-semibold mb-3">Audacious Foresight</h3>
+                    <p class="font-['Inter'] text-base opacity-70">Anticipating tomorrow's needs, pioneering solutions today.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 border border-[#2D3748] shadow-lg rounded-none bg-[#1A202C]">
+                    <img src="/assets/icon-mastery.svg" alt="Abstract icon representing mastery" class="w-16 h-16 mb-6 opacity-75" loading="lazy" />
+                    <h3 class="font-['Exo_2'] text-xl md:text-2xl font-semibold mb-3">Profound Mastery</h3>
+                    <p class="font-['Inter'] text-base opacity-70">Deep expertise, refined through relentless dedication.</p>
+                </div>
+                <div class="flex flex-col items-center p-6 border border-[#2D3748] shadow-lg rounded-none bg-[#1A202C]">
+                    <img src="/assets/icon-iteration.svg" alt="Abstract icon representing iteration" class="w-16 h-16 mb-6 opacity-75" loading="lazy" />
+                    <h3 class="font-['Exo_2'] text-xl md:text-2xl font-semibold mb-3">Iterative Transcendence</h3>
+                    <p class="font-['Inter'] text-base opacity-70">Continuous evolution, perfecting the path to unparalleled outcomes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- our-architects (Team Showcase) -->
+    <section class="bg-[#FFFFFF] text-[#000000] py-16 md:py-24 lg:py-32">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-center">
+                <div>
+                    <img
+                        src="/assets/team-silhouette-abstract.jpg"
+                        alt="Abstract silhouette of a diverse team collaborating"
+                        class="w-full h-80 md:h-96 object-cover rounded-none shadow-lg"
+                        loading="lazy"
+                    />
+                </div>
+                <div>
+                    <h2 class="font-['Exo_2'] text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+                        The Architects of Tomorrow
+                    </h2>
+                    <p class="font-['Inter'] text-lg md:text-xl leading-relaxed text-[#4A5568] mb-8">
+                        Behind every breakthrough stands a collective of minds, each a master in their domain. Our leadership is a confluence of diverse expertise, united by a shared dedication to innovation and an unwavering commitment to our visionary principles. We are the stewards of the future, operating with synchronized precision to forge paths yet unseen.
+                    </p>
+                    <blockquote class="font-['Exo_2'] text-xl md:text-2xl italic border-l-4 border-[#00A3FF] pl-6 text-[#1A202C]">
+                        "We do not merely build; we sculpt the very fabric of possibility."
+                    </blockquote>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- cta-contact (CTA Block) -->
+    <section class="relative bg-[#1A202C] text-[#FFFFFF] py-20 md:py-28 lg:py-36 overflow-hidden">
+        <img
+            src="/assets/cta-background-geometric-pattern.jpg"
+            alt="Subtle geometric pattern background"
+            class="absolute inset-0 w-full h-full object-cover opacity-20"
+            aria-hidden="true"
+            loading="lazy"
+        />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1A202C] to-transparent"></div>
+        <div class="relative z-10 container mx-auto px-4 text-center max-w-3xl">
+            <h2 class="font-['Exo_2'] text-3xl md:text-4xl lg:text-5xl font-bold leading-tight mb-6">
+                Engage with the Future
+            </h2>
+            <p class="font-['Inter'] text-lg md:text-xl opacity-80 mb-10">
+                Curiosity piqued? Discover how our precise vision can elevate your ambitions. Connect with us to explore the possibilities of a meticulously crafted tomorrow.
+            </p>
+            <a
+                href="/contact"
+                class="inline-block px-10 py-4 font-['Exo_2'] text-lg font-semibold bg-gradient-to-r from-[#00A3FF] to-[#007ACC] text-white rounded-none shadow-md hover:shadow-lg transition-all duration-300 ease-in-out"
+            >
+                Unveil the Possibilities
+            </a>
+        </div>
+    </section>
+
+</body>
+</html>
