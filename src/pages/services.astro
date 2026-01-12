@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HeroSection from '../components/HeroSection.astro';
+import Card from '../components/Card.astro';
+import Button from '../components/Button.astro';
+
+const pageTitle = "Unveiling Our Expertise: Precision in Every Solution";
+const metaDescription = "Explore a curated suite of services designed with enigmatic precision and forward-thinking innovation to transform your challenges into strategic advantages.";
+const metaKeywords = "services, strategic consulting, innovative solutions, bespoke services, precision solutions, expert services, visionary consulting, advanced strategies, exclusive services, tailored solutions";
+---
+
+<BaseLayout title={pageTitle} description={metaDescription} keywords={metaKeywords}>
+  <!-- Hero Intro Section -->
+  <HeroSection
+    id="hero-intro"
+    headline="Unveiling Our Expertise: Precision in Every Solution"
+    subheadline="Discover the bespoke strategies and innovative approaches that define our commitment to excellence and transformative results."
+    ctaText="Explore Our Realm of Services"
+    ctaLink="#core-offerings-overview"
+    image="/assets/hero-services-bg.webp"
+    class="relative"
+  >
+    <!-- Optional overlay pattern as per design notes -->
+    <img
+      src="/assets/abstract-pattern-overlay.svg"
+      alt="Abstract pattern overlay"
+      class="absolute inset-0 w-full h-full object-cover opacity-10 z-0 pointer-events-none"
+      aria-
