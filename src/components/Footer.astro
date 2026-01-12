@@ -1,0 +1,78 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+
+interface Props extends HTMLAttributes<'footer'> {}
+
+const { ...attrs } = Astro.props;
+
+const navLinks = [
+  { href: '/astro', text: 'Astro Reference' },
+  { href: '/tailwind', text: 'Tailwind Reference' },
+  { href: '/components', text: 'Components Reference' },
+  { href: '/privacy', text: 'Privacy Policy' },
+  { href: '/terms', text: 'Terms of Service' },
+];
+
+const socialLinks = [
+  { name: 'Twitter', href: 'https://twitter.com', icon: 'M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.064 7.645c-.406.18-.84.302-1.28.355.468-.282.827-.726.994-1.25-.438.26-1.01.45-1.57.55-.41-.438-1.004-.712-1.66-.712-1.25 0-2.26 1.01-2.26 2.26 0 .177.02.35.05.51-1.88-.09-3.55-.99-4.67-2.35-.19.33-.3.7-.3 1.1 0 .78.397 1.47.99 1.87-.367-.01-.714-.11-1.02-.28v.03c0 1.09 1.15 1.99 2.67 2.2-.28.07-.58.11-.89.11-.21 0-.41-.02-.61-.06.28 1.11 1.09 1.92 2.05 2.15-1.04.81-2.36 1.29-3.79 1.29-.24 0-.47-.01-.7-.04.99 1.03 2.45 1.64 4.09 1.64 4.9 0 7.57-4.06 7.57-7.57 0-.23-.01-.46-.02-.69.52-.37.97-.83 1.33-1.35z' },
+  { name: 'LinkedIn', href: 'https://linkedin.com', icon: 'M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.66 0-1.19-.53-1.19-1.19s.53-1.19 1.19-1.19 1.19.53 1.19 1.19-.53 1.19-1.19 1.19zm7 6.891h-2v-3.5c0-.811-.03-1.859-1.137-1.859-1.138 0-1.312.889-1.312 1.805v3.554h-2v-6h1.929v.837h.027c.265-.49.91-.99 1.896-.99 2.026 0 2.394 1.334 2.394 3.064v3.099z' },
+  { name: 'GitHub', href: 'https://github.com', icon: 'M12 0c-6.627 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.6.111.819-.259.819-.578 0-.285-.011-1.04-.017-2.04-3.337.724-4.042-1.61-4.042-1.61-.546-1.387-1.335-1.756-1.335-1.756-1.089-.745.083-.73.083-.73 1.205.084 1.838 1.238 1.838 1.238 1.07 1.835 2.809 1.305 3.491.998.108-.775.419-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.383 1.235-3.22-.124-.3-.535-1.52.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.046.138 3.003.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.656.242 2.876.118 3.176.77.837 1.233 1.91 1.233 3.22 0 4.61-2.809 5.625-5.478 5.922.43.37.817 1.102.817 2.221 0 1.605-.015 2.895-.015 3.284 0 .32.217.695.825.578 4.766-1.586 8.201-6.086 8.201-11.387c0-6.627-5.373-12-12-12z' },
+];
+---
+
+<footer class="bg-[#0F172A] text-[#FFFFFF] shadow-md font-['Inter'] py-8" {...attrs}>
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <!-- Brand / Copyright Section -->
+      <div>
+        <a href="/" class="text-2xl font-['Exo_2'] text-[#FFFFFF] hover:text-[#00A3FF] transition-colors duration-300" aria-label="Back to homepage">
+          Enigmatic Precision
+        </a>
+        <p class="text-[#718096] text-sm mt-4">&copy; {new Date().getFullYear()} Enigmatic Precision. All rights reserved.</p>
+      </div>
+
+      <!-- Navigation Links Section -->
+      <nav class="md:col-span-1" aria-label="Footer Navigation">
+        <h3 class="text-lg font-['Exo_2'] text-[#FFFFFF] mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          {navLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="text-[#718096] hover:text-[#00A3FF] transition-colors duration-300"
+              >
+                {link.text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+
+      <!-- Social Links Section -->
+      <div class="md:col-span-1">
+        <h3 class="text-lg font-['Exo_2'] text-[#FFFFFF] mb-4">Connect With Us</h3>
+        <div class="flex justify-center md:justify-start space-x-4">
+          {socialLinks.map((social) => (
+            <a
+              href={social.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-[#718096] hover:text-[#00A3FF] transition-colors duration-300"
+              aria-label={social.name}
+            >
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <title>{social.name} icon</title>
+                <path d={social.icon}></path>
+              </svg>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
