@@ -1,0 +1,88 @@
+---
+import type { HTMLAttributes } from 'astro';
+
+interface CommonButtonProps {
+  variant?: 'primary' | 'secondary' | 'outline';
+  size?: 'sm' | 'md' | 'lg';
+  class?: string; // Allows merging external classes
+}
+
+// Define props for a link button (<a>)
+interface LinkButtonProps extends CommonButtonProps, HTMLAttributes<'a'> {
+  href: string;
+}
+
+// Define props for a standard button (<button>)
+interface StandardButtonProps extends CommonButtonProps, HTMLAttributes<'button'> {
+  href?: never; // Ensures href is not present for a standard button
+}
+
+type Props = LinkButtonProps | StandardButtonProps;
+
+const { variant = 'primary', size = 'md', href, class: className, ...attrs } = Astro.props;
+
+const baseClasses = [
+  'inline-flex',
+  'items-center',
+  'justify-center',
+  'font-['Inter']',
+  'font-medium',
+  'rounded-none',
+  'shadow-md',
+  'transition-all',
+  'duration-200',
+  'ease-in-out',
+  'focus:outline-none',
+  'focus:ring-2',
+  'focus:ring-offset-2',
+  'focus:ring-offset-[#0F172A]', // Background Dark color for ring offset
+];
+
+const sizeClasses = {
+  sm: 'py-2 px-4 text-sm',
+  md: 'py-3 px-6 text-base',
+  lg: 'py-4 px-8 text-lg',
+};
+
+const variantClasses = {
+  primary: [
+    'bg-[#1A202C]', // Primary background
+    'text-[#FFFFFF]', // Contrasting text for dark background
+    'hover:bg-[#2D3748]', // Slightly lighter dark for hover
+    'focus:ring-[#1A202C]',
+  ],
+  secondary: [
+    'bg-[#2D3748]', // Secondary background
+    'text-[#FFFFFF]', // Contrasting text
+    'hover:bg-[#4A5568]', // Darker hover for secondary
+    'focus:ring-[#2D3748]',
+  ],
+  outline: [
+    'bg-transparent',
+    'border',
+    'border-[#00A3FF]', // Accent color border
+    'text-[#00A3FF]', // Accent color text
+    'hover:bg-[#00A3FF]', // Fill with accent on hover
+    'hover:text-[#FFFFFF]', // White text on accent hover
+    'focus:ring-[#00A3FF]',
+  ],
+};
+
+const allClasses = [
+  ...baseClasses,
+  sizeClasses[size],
+  ...variantClasses[variant],
+  className, // Allows external classes to be passed and merged
+].filter(Boolean).join(' '); // Filter out any undefined/null and join
+
+const Component = href ? 'a' : 'button';
+---
+
+<Component
+  {...attrs}
+  class={allClasses}
+  {href}
+  type={Component === 'button' ? 'button' : undefined}
+>
+  <slot />
+</Component>
