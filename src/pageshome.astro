@@ -1,0 +1,225 @@
+---
+// No Astro component imports or server-side logic needed for this static page.
+// All styling is handled via Tailwind CSS classes.
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enigmatic Precision | Visionary Solutions for a Forward-Thinking Future</title>
+  <meta name="description" content="Explore cutting-edge strategies and sophisticated solutions crafted with enigmatic precision. Unlock unparalleled potential with our visionary approach to innovation and excellence.">
+  <meta name="keywords" content="enigmatic solutions, precision services, innovative strategies, visionary approach, sophisticated insights, forward-thinking solutions, exclusive expertise, strategic consulting, advanced technology, future-proof solutions, business transformation, strategic innovation">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="font-['Inter'] text-[#FFFFFF] bg-[#0F172A] antialiased">
+
+  <!-- Header -->
+  <header class="bg-[#0F172A] text-[#FFFFFF] shadow-lg py-4">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="/" class="flex items-center space-x-2" aria-label="Enigmatic Precision Home">
+        <img src="/assets/brand-logo-white.svg" alt="Brand Logo" class="h-8">
+        <span class="font-['Exo_2'] text-2xl font-bold tracking-tight">Enigmatic Precision</span>
+      </a>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#value-proposition" class="hover:text-[#00A3FF] transition duration-300 ease-in-out font-medium">Vision</a>
+        <a href="#services-overview" class="hover:text-[#00A3FF] transition duration-300 ease-in-out font-medium">Services</a>
+        <a href="#about-us-preview" class="hover:text-[#00A3FF] transition duration-300 ease-in-out font-medium">About</a>
+        <a href="#contact" class="px-6 py-2 bg-gradient-to-r from-[#00A3FF] to-[#0077CC] text-white font-semibold rounded-none hover:opacity-90 transition duration-300 ease-in-out" aria-label="Initiate Your Vision">Contact</a>
+      </nav>
+      <button class="md:hidden text-white focus:outline-none" aria-label="Open navigation menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Intro Section -->
+    <section id="hero-intro" class="relative overflow-hidden bg-[#0F172A] py-20 md:py-32 lg:py-48 text-white">
+      <div class="absolute inset-0 z-0">
+        <img
+          src="/assets/hero-background-abstract-geometric.webp"
+          alt="Abstract geometric background representing enigmatic precision"
+          class="w-full h-full object-cover opacity-30"
+          aria-hidden="true"
+          loading="eager"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0F172A] via-transparent to-[#0F172A] opacity-70"></div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10 text-center max-w-4xl">
+        <h1 class="font-['Exo_2'] text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 drop-shadow-lg">
+          Enigmatic Precision. Unrivaled Vision.
+        </h1>
+        <p class="font-['Inter'] text-lg sm:text-xl md:text-2xl text-[#E2E8F0] mb-10 leading-relaxed max-w-3xl mx-auto">
+          We forge the future with sophisticated insights and meticulous execution, transforming complex challenges into elegant solutions. Welcome to the forefront of innovation.
+        </p>
+        <a href="#contact" class="inline-block px-8 py-4 bg-gradient-to-r from-[#00A3FF] to-[#0077CC] text-white font-['Exo_2'] text-lg font-semibold rounded-none shadow-md hover:opacity-90 transition duration-300 ease-in-out" aria-label="Initiate Your Vision">
+          Initiate Your Vision
+        </a>
+      </div>
+    </section>
+
+    <!-- Value Proposition Section -->
+    <section id="value-proposition" class="bg-[#0F172A] py-16 md:py-24 lg:py-32 text-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          <div class="lg:w-1/2 text-center lg:text-left">
+            <h2 class="font-['Exo_2'] text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              Where Vision Meets Velocity
+            </h2>
+            <p class="font-['Inter'] text-base sm:text-lg text-[#E2E8F0] mb-8 leading-relaxed">
+              Our methodology is a symphony of foresight and exactitude, meticulously crafted to deliver outcomes that transcend expectation. We don't just solve problems; we redefine possibilities with an exclusive, forward-thinking approach. We are the architects of your next breakthrough, operating with a quiet confidence that speaks volumes in results.
+            </p>
+            <div class="flex justify-center lg:justify-start space-x-8 mt-8">
+              <div class="text-center">
+                <img src="/assets/icon-visionary-thinking.svg" alt="Visionary Thinking Icon" class="h-12 w-12 mx-auto mb-3">
+                <p class="font-['Exo_2'] text-xl font-semibold">Visionary Thinking</p>
+              </div>
+              <div class="text-center">
+                <img src="/assets/icon-precise-execution.svg" alt="Precise Execution Icon" class="h-12 w-12 mx-auto mb-3">
+                <p class="font-['Exo_2'] text-xl font-semibold">Precise Execution</p>
+              </div>
+            </div>
+          </div>
+          <div class="lg:w-1/2 relative">
+            <img
+              src="/assets/abstract-data-flow.webp"
+              alt="Abstract data flow representing sophisticated insights"
+              class="w-full h-auto object-cover rounded-none shadow-xl"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 border border-[#00A3FF] opacity-30 rounded-none animate-pulse-slow"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview Section -->
+    <section id="services-overview" class="bg-[#1A202C] py-16 md:py-24 lg:py-32 text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="font-['Exo_2'] text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          Our Expertise: Crafting Tomorrow's Landscape
+        </h2>
+        <p class="font-['Inter'] text-base sm:text-lg text-[#E2E8F0] mb-12 max-w-3xl mx-auto leading-relaxed">
+          Explore the pillars of our proficiency, each designed to navigate complexity and unlock unparalleled potential. We specialize in areas where conventional thinking falls short, providing bespoke solutions with an unwavering commitment to excellence. From strategic foresight to groundbreaking implementation, our services are tailored for the visionary.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service Card 1 -->
+          <div class="bg-[#0F172A] text-[#FFFFFF] font-['Inter'] rounded-none border border-[#2D3748] shadow-lg p-8 flex flex-col h-full hover:shadow-2xl hover:border-[#00A3FF] transition duration-300 ease-in-out">
+            <img src="/assets/icon-strategy.svg" alt="Strategic Foresight Icon" class="w-16 h-16 mx-auto mb-6">
+            <h3 class="font-['Exo_2'] text-2xl font-semibold leading-tight mb-3">Strategic Foresight</h3>
+            <p class="font-['Inter'] text-base text-[#CBD5E0] leading-relaxed flex-grow">
+              Unveil profound insights and chart a course through the complexities of the future with our unparalleled strategic acumen. We empower your vision with precision.
+            </p>
+          </div>
+          <!-- Service Card 2 -->
+          <div class="bg-[#0F172A] text-[#FFFFFF] font-['Inter'] rounded-none border border-[#2D3748] shadow-lg p-8 flex flex-col h-full hover:shadow-2xl hover:border-[#00A3FF] transition duration-300 ease-in-out">
+            <img src="/assets/icon-innovation.svg" alt="Innovation & Development Icon" class="w-16 h-16 mx-auto mb-6">
+            <h3 class="font-['Exo_2'] text-2xl font-semibold leading-tight mb-3">Innovation & Development</h3>
+            <p class="font-['Inter'] text-base text-[#CBD5E0] leading-relaxed flex-grow">
+              Pioneer new realms of possibility. We transform groundbreaking concepts into tangible, high-impact solutions with meticulous and innovative execution.
+            </p>
+          </div>
+          <!-- Service Card 3 -->
+          <div class="bg-[#0F172A] text-[#FFFFFF] font-['Inter'] rounded-none border border-[#2D3748] shadow-lg p-8 flex flex-col h-full hover:shadow-2xl hover:border-[#00A3FF] transition duration-300 ease-in-out">
+            <img src="/assets/icon-execution.svg" alt="Precision Implementation Icon" class="w-16 h-16 mx-auto mb-6">
+            <h3 class="font-['Exo_2'] text-2xl font-semibold leading-tight mb-3">Precision Implementation</h3>
+            <p class="font-['Inter'] text-base text-[#CBD5E0] leading-relaxed flex-grow">
+              Elevate your projects from concept to flawless reality. Our precise implementation ensures every detail is perfected, delivering unparalleled results.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Preview Section -->
+    <section id="about-us-preview" class="bg-[#0F172A] py-16 md:py-24 lg:py-32 text-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+          <div class="lg:w-1/2 relative">
+            <img
+              src="/assets/abstract-team-representation.webp"
+              alt="Abstract representation of a visionary team"
+              class="w-full h-auto object-cover rounded-none shadow-xl"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 border border-[#2D3748] opacity-50 rounded-none"></div>
+          </div>
+          <div class="lg:w-1/2 text-center lg:text-left">
+            <h2 class="font-['Exo_2'] text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight">
+              The Architects of Tomorrow
+            </h2>
+            <p class="font-['Inter'] text-base sm:text-lg text-[#E2E8F0] mb-8 leading-relaxed">
+              Behind every groundbreaking solution is a philosophy steeped in visionary thinking and a dedication to the unseen details. Our story is one of relentless pursuit, guided by an enigmatic precision that redefines industry standards.
+            </p>
+            <p class="font-['Inter'] text-sm sm:text-base text-[#718096] mb-10 leading-relaxed">
+              At the heart of our operations lies a philosophy of relentless innovation and an unwavering commitment to precision. We are a collective of forward-thinkers, strategists, and creators, united by a singular purpose: to transcend the ordinary. Our journey is one of continuous discovery, driven by an insatiable curiosity and a profound understanding of the intricate forces shaping the future. Learn more about the minds behind the enigma.
+            </p>
+            <a href="/about" class="inline-block px-8 py-4 bg-gradient-to-r from-[#00A3FF] to-[#0077CC] text-white font-['Exo_2'] text-lg font-semibold rounded-none shadow-md hover:opacity-90 transition duration-300 ease-in-out" aria-label="Discover Our Story">
+              Discover Our Story
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Contact Section -->
+    <section id="contact" class="relative bg-[#1A202C] py-20 md:py-28 lg:py-36 text-white text-center overflow-hidden">
+      <div class="absolute inset-0 z-0">
+        <img
+          src="/assets/cta-background-gradient-dark.webp"
+          alt="Dark gradient background for call to action"
+          class="w-full h-full object-cover opacity-50"
+          aria-hidden="true"
+          loading="lazy"
+        >
+        <div class="absolute inset-0 bg-gradient-to-t from-[#1A202C] via-transparent to-[#1A202C] opacity-70"></div>
+      </div>
+      <div class="container mx-auto px-4 relative z-10 max-w-3xl">
+        <h2 class="font-['Exo_2'] text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight drop-shadow-lg">
+          Forge Your Future with Us
+        </h2>
+        <p class="font-['Inter'] text-base sm:text-lg text-[#E2E8F0] mb-10 leading-relaxed">
+          Ready to transform your vision into an undeniable reality? Our team is poised to collaborate on your next extraordinary endeavor. Connect with us to explore how our enigmatic precision can redefine your future.
+        </p>
+        <a href="/contact" class="inline-block px-10 py-5 bg-gradient-to-r from-[#00A3FF] to-[#0077CC] text-white font-['Exo_2'] text-xl font-semibold rounded-none shadow-lg hover:opacity-90 transition duration-300 ease-in-out" aria-label="Initiate Your Vision">
+          Initiate Your Vision
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-[#0F172A] text-[#718096] py-12">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div>
+        <h3 class="font-['Exo_2'] text-xl font-semibold mb-4 text-[#FFFFFF]">Enigmatic Precision</h3>
+        <p class="font-['Inter'] text-sm leading-relaxed">
+          Pioneering the future with sophisticated insights and meticulous execution.
+        </p>
+      </div>
+      <div>
+        <h3 class="font-['Exo_2'] text-xl font-semibold mb-4 text-[#FFFFFF]">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="/astro" class="hover:text-[#00A3FF] transition duration-300 ease-in-out">Astro Reference</a></li>
+          <li><a href="/tailwind" class="hover:text-[#00A3FF] transition duration-300 ease-in-out">Tailwind Reference</a></li>
+          <li><a href="/components" class="hover:text-[#00A3FF] transition duration-300 ease-in-out">Components Reference</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="font-['Exo_2'] text-xl font-semibold mb-4 text-[#FFFFFF]">Legal</h3>
+        <ul class="space-y-2">
+          <li><a href="/privacy" class="hover:text-[#00A3FF] transition duration-300 ease-in-out">Privacy Policy</a></li>
+          <li><a href="/terms" class="hover:text-[#00A3FF] transition duration-300 ease-in-out">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container mx-auto px-4 mt-10 pt-8 border-t border-[#2D3748] text-center text-sm">
+      <p>&copy; 2023 Enigmatic Precision. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
